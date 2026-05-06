@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { @apply border-gray-200 dark:border-gray-800; }
+  body { @apply bg-gray-100 dark:bg-gray-950 text-gray-900 dark:text-gray-100 antialiased; }
+
+  .dark .bg-white        { background-color: rgb(17 24 39)  !important; }
+  .dark .bg-gray-50      { background-color: rgb(3 7 18)    !important; }
+  .dark .bg-gray-100     { background-color: rgb(11 15 25)  !important; }
+  .dark .bg-gray-200     { background-color: rgb(31 41 55)  !important; }
+  .dark .border-gray-100 { border-color: rgb(31 41 55)      !important; }
+  .dark .border-gray-200 { border-color: rgb(55 65 81)      !important; }
+  .dark .text-gray-900   { color: rgb(243 244 246)          !important; }
+  .dark .text-gray-700   { color: rgb(209 213 219)          !important; }
+  .dark .text-gray-600   { color: rgb(156 163 175)          !important; }
+  .dark .text-gray-500   { color: rgb(107 114 128)          !important; }
+  .dark .text-gray-400   { color: rgb(75 85 99)             !important; }
+  .dark input, .dark textarea {
+    background-color: rgb(31 41 55) !important;
+    color: rgb(243 244 246)         !important;
+    border-color: rgb(55 65 81)     !important;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  .mobile-pt { @apply pt-14 md:pt-0; }
+}
